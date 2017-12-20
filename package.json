@@ -1,0 +1,22 @@
+{
+  "name": "week14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Activity1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batlijo/Week14.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batlijo/Week14/issues"
+  },
+  "homepage": "https://github.com/batlijo/Week14#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
