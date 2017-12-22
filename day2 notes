@@ -15,8 +15,13 @@ delete: it deletes a query on the server ??
 rest: Representational State Transfer. how do we get resources from a web server?
 we want it to be statements. ie. " I want to get user A."
 that query doesn't change. it shouldnt return side affects.
-It should return the same thing every time. Deals with URI. rest is an architecture
+It should return the same thing every time. Deals with URI. rest is an architecture.
+An architectural style called REST (Representational State Transfer) advocates that web applications
+should use HTTP as it was originally envisioned. Lookups should use GET requests. PUT, POST, and DELETE
+requests should be used for mutation, creation, and deletion respectively.
 
+
+We use HTTP, so we can put messages in the right order. It will attempt to keep getting data which is important.
 
 random code for animals activity
 

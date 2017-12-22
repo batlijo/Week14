@@ -7,7 +7,7 @@ var port = 3000;
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); //request for post to parse back whatever the body is to be able to use it
-// all requests and responses will have headers and will always have the same format
+// all requests and responses will have headers and will always have the same format, we are bootstrapping our application
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -31,7 +31,7 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-// Root get route
+// Root get route, go to your database and run that query and if you get an error it will tell you what the error is and renders the object to the database to the index view
 app.get("/", function(req, res) {
   connection.query("SELECT * FROM tasks;", function(err, data) {
     if (err) throw err;
@@ -47,8 +47,7 @@ app.get("/", function(req, res) {
   });
 });
 
-// Post route -> back to home
-app.post("/", function(req, res) {
+// Post route -> back to home, now going to post onto the index...
   // Test it
   // console.log('You sent, ' + req.body.task);
 
@@ -58,7 +57,9 @@ app.post("/", function(req, res) {
   connection.query("INSERT INTO tasks (task) VALUES (?)",
   [req.body.task], function(err, result) {
     if (err) throw err;
-
+    //if no error it will redirect back to the index. if you do get an error you need to close the connection.
+    //you have limited amount of connections you can make on your computer. be mindful of closing database connections ASAP
+    app.post("/", function(req, res) {
     res.redirect("/"); //redirect to the route directory
   });
 });
