@@ -1,0 +1,26 @@
+Class Objectives
+- Learn HTTP verbs: besides get and post
+- Create mini App
+- Use express and template engine
+
+THE FOLLOWING ARE HTTP VERBS URL <--> URI
+get: server goes and locates the resource, parses the body
+post: when you want the server to act in a certain way. you give it a body to put what ever you want in it. create a resource on the server.
+put: update. resource already exists on the server, so you might have to do a query to know that information
+delete: it deletes a query on the server ??
+
+
+
+
+rest: Representational State Transfer. how do we get resources from a web server?
+we want it to be statements. ie. " I want to get user A."
+that query doesn't change. it shouldnt return side affects.
+It should return the same thing every time. Deals with URI. rest is an architecture
+
+
+random code for animals activity
+
+{{#each anims}}
+  <p> Type: {{animalType}}</p>
+
+  HTTP: Hypertext Transfer Protocol

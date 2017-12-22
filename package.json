@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/batlijo/Week14#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11"
   }
 }
