@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/batlijo/Week14#readme",
   "dependencies": {
+    "body": "^5.1.0",
     "express": "^4.16.2",
-    "handlebars": "^4.0.11"
+    "handlebars": "^4.0.11",
+    "mysql": "^2.15.0",
+    "parser": "^0.1.4"
   }
 }
