@@ -46,3 +46,8 @@ console.log(data); //data is undefined why?
 
 
 any time you introduce asynchronous code, the rest of your code has to be that way
+
+
+MVC is an architectural pattern, it's SUPPOSED to be just your data but you'll see often times thats not the case
+
+Ruby on rails forces you into these opinionated frameworks...you do it that rails way.
