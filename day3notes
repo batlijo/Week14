@@ -1,3 +1,48 @@
 class objectives:
 - intro to sequelize:
   - an ORM written in javascript that runs on node
+
+  what is a sequelize?
+  - ORM: object relational mapper [runs on top of node]
+
+  what advantages does it offer?
+
+  how do i install it?
+  - npm install --save sequelize
+
+  what is a sequelize model? what role will it play?
+
+
+  WHY DO WE USE EXPRESS:
+
+   - a framework that allows us to serve our http stuff so we don't have to do the stuff on our own
+
+
+   ^ just kidding this is for thursday
+
+
+  CLASS objectives
+  - CRUD
+  - Callbacks
+  - MVC : model view controller
+
+  ORM.JS
+   var queryString = "SELECT * FROM ?? WHERE ?? = ?"
+   connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err){
+   //this function is asynchronous because of documentation and because we have a call back function of function(err)
+   })
+var orm = {
+selectWhere: function ()
+
+--
+
+var orm = require("../config/orm.js")
+var data = undefined
+orm.selectWhere("parties", "party_type", "grown-up", x => data = x; //this runs asynchronously so data isn't set anything to it...need to set a call back function
+
+// insert call back function as an argument
+
+console.log(data); //data is undefined why?
+
+
+any time you introduce asynchronous code, the rest of your code has to be that way
