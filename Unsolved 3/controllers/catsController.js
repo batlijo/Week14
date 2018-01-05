@@ -7,7 +7,7 @@ var cat = require("../models/cat.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  cat.all(function(data) {
+  cat.all(function(data) { //get all the cats then render in index which is in handlebar views...ORM wil help you with what your intent is instead of having a bunch of code
     var hbsObject = {
       cats: data
     };
@@ -32,20 +32,27 @@ router.put("/api/cats/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  cat.update({
+  cat.update({ //need to specify what we need to update so we pass it in as an object
     sleepy: req.body.sleepy
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
-      return res.status(404).end();
+      return res.status(404).end(); //404 bc the resource doesn't exist
     } else {
-      res.status(200).end();
+      res.status(200).end(); //200 if resource was created successfuly
     }
   });
 });
 
 // Export routes for server.js to use.
 module.exports = router;
+
+router.delete("/api/cats/:id", function(req, res){
+  //this solution code is not completed yet
+})
+
+
+
 
 /* /api/cats/:id delete route,
 to call the delete key of the cat model, and to pass in arguments as necessary */

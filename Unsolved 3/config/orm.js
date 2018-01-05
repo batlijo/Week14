@@ -16,7 +16,7 @@ function printQuestionMarks(num) {
   return arr.toString();
 }
 
-// Helper function to convert object key/value pairs to SQL syntax
+// Helper function to convert object key/value pairs to SQL syntax...iterating through each of the keys in the object. once we have that value we want to check if that object has that key. if it does have the key we want to check if its a string and if its empty.  javascript then string then sql.
 function objToSql(ob) {
   var arr = [];
 
@@ -31,7 +31,7 @@ function objToSql(ob) {
       }
       // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
       // e.g. {sleepy: true} => ["sleepy=true"]
-      arr.push(key + "=" + value);
+      arr.push(key + "=" + value); //where something equals something
     }
   }
 
@@ -41,7 +41,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
-  all: function(tableInput, cb) {
+  all: function(tableInput, cb) { //all is a property
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -50,7 +50,7 @@ var orm = {
       cb(result);
     });
   },
-  create: function(table, cols, vals, cb) {
+  create: function(table, cols, vals, cb) { //create is a property
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -71,7 +71,7 @@ var orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: function(table, objColVals, condition, cb) {
+  update: function(table, objColVals, condition, cb) { //update property
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";

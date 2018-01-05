@@ -1,6 +1,8 @@
 // Import the ORM to create functions that will interact with the database.
 var orm = require("../config/orm.js");
 
+var cat = require("../models/cat.js")
+
 var cat = {
   all: function(cb) {
     orm.all("cats", function(res) {
