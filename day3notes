@@ -1,0 +1,3 @@
+class objectives:
+- intro to sequelize:
+  - an ORM written in javascript that runs on node
